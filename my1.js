@@ -1083,12 +1083,14 @@ p.frameBounds = [rect, rect, rect, rect, rect, rect=new cjs.Rectangle(-19.5,-27.
 		var backGround, starField1, starField2, spaceCorridor1, spaceCorridor2;
 		var hud, shieldBar, pointsDisplay;
 		var game, ship, shields, obstacles, nextObstacles, pickups, nextPickup, currentPoints;
-		
+		var circle;
 		 
 		function init() {
 			c = createjs;
-			w = stage.canvas.width;
-			h = stage.canvas.height;
+			//w = stage.canvas.width;
+			//h = stage.canvas.height;
+			w = 400;
+			h = 400;
 			 currentPoints = 0;
 			
 			buildBackground();
@@ -1102,12 +1104,18 @@ p.frameBounds = [rect, rect, rect, rect, rect, rect=new cjs.Rectangle(-19.5,-27.
 			buildHUD();
 			buildTitleScreen();
 			
+			circle = new createjs.Shape();
+			
 			c.Ticker.on("tick", gameLoop);
 			stage.on("stagemousedown", handleMouseClick);
 			window.addEventListener("keydown", handleKeyPress);
 		}
 		
 		function gameLoop(e) {
+			//console.log(w);
+			
+			
+			
 			if (isPlaying) {
 				
 				if (shields == 0 && !isExplode) {
