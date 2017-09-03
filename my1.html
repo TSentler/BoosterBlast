@@ -18,6 +18,7 @@
 	position:absolute;
 	margin:auto;
 	left:0;right:0;
+	top:0;bottom:0;
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
@@ -84,7 +85,7 @@ function handleComplete(evt) {
 			lastW = iw; lastH = ih; lastS = sRatio;		
 		}
 	}
-	makeResponsive(false,'both',false,1);	
+	makeResponsive(true,'both',false,1);	
 	fnStartAnimation();
 }
 function playSound(id, loop) {
