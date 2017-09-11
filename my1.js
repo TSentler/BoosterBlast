@@ -1234,9 +1234,6 @@ p.frameBounds = [rect, rect, rect, rect, rect, rect=new cjs.Rectangle(-19.5,-27.
 		
 		function gameLoop(e) {
 			//console.log(w);
-			for (var i = 0; i < 50; i++){
-				var hit = stage.hitTest(0, 0);
-			}
 			if (isPlaying) {
 				
 				if (shields == 0 && !isExplode) {
